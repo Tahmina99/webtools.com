@@ -1,0 +1,18 @@
+body{
+font-family:arial,helvetica;
+color:black;
+background-color:#9DDDF4;
+}
+p{
+font-size:16px;
+color:black;
+}
+#fruits{
+	background-color: #a1dd3b;
+	height: 234px;
+	left: 18px;
+	padding: 11px;
+	position: absolute;
+	top: 21px;
+	width: 340px;
+	}

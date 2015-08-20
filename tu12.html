@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<title>Assignment 1- form</title>
+<link rel="stylesheet" type="text/css" href="styles/tu12.css"/>
+</head>
+<body>
+<img src="images/02.jpeg " alt="web development">
+<h4>please sign up your guest list and a representative will contact you soon</h4>
+<form method="post" action="tu12.php">
+<p>
+first name:<br/>
+<input type="text" name="firstname" size="30"/>
+</p>  
+<p>
+last name:<br/>
+<input type="text" name="lastname" size="30"/>
+</p>
+<p>
+contact information:
+<input type="radio" name="contact" value="phone" checked="checked"/>Phone
+<input type="radio" name="contact" value="email"/>Email<br/>
+<input type="text" name="phoneoremail" size="50">
+</p>
+<p>
+city where you want to reside:<br/>
+<select name="city" size="1">
+<option value="Dhaka">Dhaka </option>
+<option value="Noakhali">Noakhali</option>
+<option value="Luxmipur">Luxmipur</option>
+</select>
+</p>
+<p>
+Comments:<br/>
+<textarea name="comments" cols="40" rows="5"></textarea>
+</p>
+<p>
+<input type="submit" value="submit information"/>
+</p>
+
+
+</form>
+
+
+</body>
+
+</html>

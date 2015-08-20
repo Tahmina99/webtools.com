@@ -1,0 +1,28 @@
+body{
+font-family:arial,helvetica;
+color:black;
+background-color:#9DDDF4;
+}
+p{
+font-size:16px;
+color:black;
+}
+#fruits{
+	background-color: #a1dd3b;
+	height: 234px;
+	left: 18px;
+	padding: 11px;
+	position: absolute;
+	top: 21px;
+	width: 340px;
+	}
+#yourage{
+	background-color: #346c7e;
+	height: 233px;
+	left: 404px;
+	padding: 11px;
+	position: absolute;
+	top: 22px;
+	width: 342px;
+	
+	}

@@ -1,0 +1,50 @@
+body{
+font-family:arial,helvetica;
+color:black;
+background-color:#9DDDF4;
+}
+p{
+font-size:16px;
+color:#BC6733;
+}
+input{
+font-size:16px;
+}
+select{
+font-size:16px;
+}
+.textblue{
+color:blue;
+}
+textarea{
+font-size:8px;
+font-family:arial,helvetica;
+}
+.textdisabled{
+background-color:lightgray;
+}
+.image{}
+.image img{
+
+height: 149px;
+width: 615px;
+}
+
+#guest{
+	background-color: #a1dd3b;
+	height: 469px;
+	left: 25px;
+	padding: 11px;
+	position: absolute;
+	top: 185px;
+	width: 285px;
+	}
+	#calculator{
+	background-color: #346c7e;
+	height: 467px;
+	left: 361px;
+	padding: 11px;
+	position: absolute;
+	top: 185px;
+	width: 248px;
+	}
