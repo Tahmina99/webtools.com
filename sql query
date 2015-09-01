@@ -1,0 +1,11 @@
+29-08-15
+1.Find all loans of over $1500;
+select * from loan where amount>1500
+2.Find the loan number for each loan of an amount greater than $1200
+select loan_number from loan where amount>1200
+3.Find the name of all customer who have a loan,an account,or both from the bank
+(select cus_name from depositor)union(select cus_name from borrower)
+4.Find the name of all customer who have a loan at the sea branch
+select cus_name from loan,borrower where loan.loan_number=borrower.loan_number and br_name='sea'
+5.Find the name of all customer who have a loan at the sea branch  but do not have an account at any branch of the bank
+(select distinct cus_name from loan,borrower where loan.loan_number=borrower.loan_number and br_name='sea')except(select cus_name from depositor)
