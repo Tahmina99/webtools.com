@@ -1,0 +1,34 @@
+
+Chapter 11(using the mysql extension)
+topics:
+1.Querying a MySQL Database with mysqli
+2.Creating a login file:This is the same as mysql that we learnt in chapter 10.
+<?php // login.php
+$db_hostname = 'localhost';
+$db_database = 'database1';
+$db_username = 'root';
+$db_password = '';
+?>
+3.Connecting to MySQL:
+<?php
+require_once 'login.php';
+$connection = new mysqli($db_hostname, $db_username, $db_password, $db_database);
+if ($connection->connect_error) die($connection->connect_error)
+?>
+4.Building and executing a query
+<?php
+$query = "SELECT * FROM customer";
+$result = $connection->query($query);
+if (!$result) die($connection->error);
+?>
+5.Fetching a result and fetching a row
+6.Using mysqli Procedurally:
+$connection = new mysqli($db_hostname, $db_username, $db_password, $db_database);
+$link = mysqli_connect($db_hostname, $db_username, $db_password, $db_database);
+if (mysqli_connect_errno()) die(mysqli_connect_error());
+$result = mysqli_query($link, "SELECT * FROM customer");
+$rows = mysqli_num_rows($result));
+$row = mysqli_fetch_array($result, MYSQLI_NUM);
+$escaped = mysqli_real_escape_string($link, $val);
+
+

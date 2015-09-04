@@ -1,0 +1,71 @@
+
+chapter 10(Accessing MySQL with PHP)
+
+
+1.The Process
+	The process of using MySQL with PHP is:
+	1. Connect to MySQL.
+	2. Select the database to use.
+	3. Build a query string.
+	4. Perform the query.
+	5. Retrieve the results and output them to a web page.
+	6. Repeat Steps 3 to 5 until all desired data has been retrieved.
+	7. Disconnect from MySQL.
+2.creating a login file:
+	First we create a login file which include hostname,database name,user name,password.
+3.connecting to mysql:
+	After creating a login file we connect this file to mysql.Here we use require_once statement.
+	The login.php file is connected to the database by use mysql_connect() function by the following way:
+	<?php
+	require_once 'login.php';
+	$db_server = mysql_connect($db_hostname, $db_username, $db_password);
+	if (!$db_server) die("Unable to connect to MySQL: " . mysql_error());
+	?>
+4.Selecting a database:
+	we select a database by use the mysql_select_db() function by the way:
+	<?php
+        mysql_select_db($db_database)
+	or die("Unable to select database: " . mysql_error());
+	?>
+5.Building and executing a query:
+	we can build and execute a query by the way:
+	<?php
+	$query = "SELECT * FROM customer";
+	$result = mysql_query($query);
+	if (!$result) die ("Database access failed: " . mysql_error());
+	?>
+6.Fetching a result
+7.fetching a row:A row is fetched by the use of myqsl_fetch_row() function
+8.closing a coonection:the connection is closed by use mysql_close($db_server)
+9.The $_POST Array:
+	$_POST is an associative array. Depending on
+	whether a form has been set to use the POST or the GET method, either the $_POST or the
+	$_GET associative array will be populated with the form data. They can both be read in
+	exactly the same way.
+10.Deleting a Record:
+11.Displaying the Form:here we use echo<<<_END structure,where outputs are display between the _END tags
+12.Querying the Database:
+13.Practical MySQL:
+14.creating a table:
+CREATE TABLE cats (
+id SMALLINT NOT NULL AUTO_INCREMENT,
+family VARCHAR(32) NOT NULL,
+name VARCHAR(32) NOT NULL,
+age TINYINT NOT NULL,
+PRIMARY KEY (id));
+15.Describing a Table
+	$query = "DESCRIBE customers";
+	$result = mysql_query($query);
+16.Dropping a Table
+	$query = "DROP customers";
+	$result = mysql_query($query);
+17.Adding Data
+	$query = "INSERT INTO customers VALUES('tani','main','Dhaka')";
+	$result = mysql_query($query);
+18.Updating Data:
+	$query = "UPDATE customers SET name='Charlie' WHERE name='Charly'";
+	$result = mysql_query($query);
+19.Deleting Data:
+	$query = "DELETE FROM customers WHERE name='tani'";
+	$result = mysql_query($query);
+20.
